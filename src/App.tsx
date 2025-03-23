@@ -87,68 +87,109 @@ function App() {
   return (
     <div className="app-container">
       <header className="header">
-        <h1>Text Case Converter</h1>
+        <h1>Penukar Huruf Teks</h1>
       </header>
-      
+
       <main>
         <div className="text-input-container">
-          <textarea 
-            className="text-input" 
-            value={text} 
-            onChange={handleTextChange} 
-            placeholder="Enter your text here..."
+          <textarea
+            className="text-input"
+            value={text}
+            onChange={handleTextChange}
+            placeholder="Masukkan teks anda di sini..."
             rows={8}
           />
-          
+
           <div className="input-actions">
-            <button onClick={clearText} className="action-button">Clear</button>
-            <button onClick={pasteFromClipboard} className="action-button">Paste</button>
-            <button 
-              onClick={() => copyToClipboard()} 
+            <button onClick={clearText} className="action-button">
+              Padam
+            </button>
+            <button onClick={pasteFromClipboard} className="action-button">
+              Tampal
+            </button>
+            <button
+              onClick={() => copyToClipboard()}
               className="action-button"
               disabled={!text}
             >
-              Copy
+              Salin
             </button>
           </div>
         </div>
-        
+
         <div className="conversion-buttons">
-          <button onClick={() => convertCase(toSentenceCase)} className="case-button">Sentence case</button>
-          <button onClick={() => convertCase(toLowerCase)} className="case-button">lowercase</button>
-          <button onClick={() => convertCase(toUpperCase)} className="case-button">UPPERCASE</button>
-          <button onClick={() => convertCase(toCapitalizedCase)} className="case-button">Capitalized Case</button>
-          <button onClick={() => convertCase(toAlternatingCase)} className="case-button">aLtErNaTiNg cAsE</button>
-          <button onClick={() => convertCase(toTitleCase)} className="case-button">Title Case</button>
-          <button onClick={() => convertCase(toInverseCase)} className="case-button">InVeRsE CaSe</button>
+          <button
+            onClick={() => convertCase(toSentenceCase)}
+            className="case-button"
+          >
+            Huruf pertama ayat
+          </button>
+          <button
+            onClick={() => convertCase(toLowerCase)}
+            className="case-button"
+          >
+            huruf kecil
+          </button>
+          <button
+            onClick={() => convertCase(toUpperCase)}
+            className="case-button"
+          >
+            HURUF BESAR
+          </button>
+          <button
+            onClick={() => convertCase(toCapitalizedCase)}
+            className="case-button"
+          >
+            Huruf Besar Setiap Perkataan
+          </button>
+          <button
+            onClick={() => convertCase(toAlternatingCase)}
+            className="case-button"
+          >
+            hUrUf sElAnG-sElI
+          </button>
+          <button
+            onClick={() => convertCase(toTitleCase)}
+            className="case-button"
+          >
+            Huruf Besar Tajuk
+          </button>
+          <button
+            onClick={() => convertCase(toInverseCase)}
+            className="case-button"
+          >
+            hUrUf tErBaLiK
+          </button>
         </div>
-        
+
         <div className="text-stats">
           <div className="stats-box">
-            <span className="stats-label">Characters:</span>
+            <span className="stats-label">Huruf:</span>
             <span className="stats-value">{stats.chars}</span>
           </div>
           <div className="stats-box">
-            <span className="stats-label">Words:</span>
+            <span className="stats-label">Perkataan:</span>
             <span className="stats-value">{stats.words}</span>
           </div>
           <div className="stats-box">
-            <span className="stats-label">Sentences:</span>
+            <span className="stats-label">Ayat:</span>
             <span className="stats-value">{stats.sentences}</span>
           </div>
           <div className="stats-box">
-            <span className="stats-label">Lines:</span>
+            <span className="stats-label">Baris:</span>
             <span className="stats-value">{stats.lines}</span>
           </div>
         </div>
       </main>
-      
+
       <footer className="footer">
-        <p>Made with 💪 Neobrutalism</p>
-        <a href="#" className="donation-link">Support this project</a>
+        <p>Dibuat dengan 💪 <a href="https://www.neobrutalism.dev/">Neobrutalism</a></p>
+        <a href="#" className="donation-link">
+          Sokong projek ini
+        </a>
       </footer>
     </div>
-  )
+  );
 }
 
 export default App
