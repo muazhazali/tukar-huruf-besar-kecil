@@ -3,7 +3,6 @@ import './App.css'
 
 function App() {
   const [text, setText] = useState<string>('')
-  const [output, setOutput] = useState<string>('')
   
   // Text conversion functions
   const toSentenceCase = (text: string) => {
@@ -50,18 +49,17 @@ function App() {
   
   // Handle case conversion
   const convertCase = (conversionFn: (text: string) => string) => {
-    setOutput(conversionFn(text));
+    setText(conversionFn(text));
   }
   
   // Clear text
   const clearText = () => {
     setText('');
-    setOutput('');
   }
   
   // Copy text to clipboard
-  const copyToClipboard = (textToCopy: string) => {
-    navigator.clipboard.writeText(textToCopy);
+  const copyToClipboard = () => {
+    navigator.clipboard.writeText(text);
   }
   
   // Paste from clipboard
@@ -105,6 +103,13 @@ function App() {
           <div className="input-actions">
             <button onClick={clearText} className="action-button">Clear</button>
             <button onClick={pasteFromClipboard} className="action-button">Paste</button>
+            <button 
+              onClick={() => copyToClipboard()} 
+              className="action-button"
+              disabled={!text}
+            >
+              Copy
+            </button>
           </div>
         </div>
         
@@ -116,23 +121,6 @@ function App() {
           <button onClick={() => convertCase(toAlternatingCase)} className="case-button">aLtErNaTiNg cAsE</button>
           <button onClick={() => convertCase(toTitleCase)} className="case-button">Title Case</button>
           <button onClick={() => convertCase(toInverseCase)} className="case-button">InVeRsE CaSe</button>
-        </div>
-        
-        <div className="output-container">
-          <div className="output-header">
-            <h2>Output</h2>
-            <button 
-              onClick={() => copyToClipboard(output)} 
-              className="copy-button"
-              disabled={!output}
-            >
-              Copy
-            </button>
-          </div>
-          
-          <div className="output-display">
-            {output || "Converted text will appear here..."}
-          </div>
         </div>
         
         <div className="text-stats">

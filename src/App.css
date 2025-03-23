@@ -57,7 +57,7 @@ body {
 main {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 20px;
 }
 
 /* Text input styles */
@@ -75,6 +75,7 @@ main {
   resize: vertical;
   transition: transform 0.2s;
   font-family: var(--font-primary);
+  min-height: 200px;
 }
 
 .text-input:focus {
@@ -150,48 +151,6 @@ button:active {
 .case-button:hover {
   transform: scale(1.05);
   z-index: 1;
-}
-
-/* Output styles */
-.output-container {
-  width: 100%;
-  margin: 20px 0;
-}
-
-.output-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
-.output-header h2 {
-  font-size: 1.8rem;
-  font-weight: 800;
-  transform: rotate(-1deg);
-}
-
-.copy-button {
-  background-color: var(--primary-color);
-  color: white;
-  transform: rotate(2deg);
-}
-
-.copy-button:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-.output-display {
-  min-height: 100px;
-  padding: 20px;
-  border: var(--border-width) solid var(--border-color);
-  box-shadow: var(--shadow-offset) var(--shadow-offset) 0 var(--border-color);
-  background-color: white;
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-  white-space: pre-wrap;
-  word-break: break-word;
 }
 
 /* Stats styles */
@@ -278,10 +237,10 @@ button:active {
     grid-template-columns: 1fr 1fr;
   }
   
-  .text-input, 
-  .output-display {
+  .text-input {
     padding: 15px;
     font-size: 1rem;
+    min-height: 150px;
   }
 }
 
