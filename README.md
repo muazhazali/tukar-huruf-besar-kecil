@@ -1,54 +1,87 @@
-# React + TypeScript + Vite
+# Penukar Huruf Teks (Text Case Converter)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern web application for converting text between different case formats. Built with React, TypeScript, and Vite, featuring a beautiful neobrutalism design.
 
-Currently, two official plugins are available:
+🔗 [Live Demo](https://tukarhuruf.muazhazali.me/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- Convert text to various case formats:
+  - Sentence case (Huruf pertama ayat)
+  - Lowercase (huruf kecil)
+  - Uppercase (HURUF BESAR)
+  - Capitalized case (Huruf Besar Setiap Perkataan)
+  - Alternating case (hUrUf sElAnG-sElI)
+  - Title case (Huruf Besar Tajuk)
+  - Inverse case (hUrUf tErBaLiK)
+- Text statistics (characters, words, sentences, lines)
+- Copy to clipboard functionality
+- Paste from clipboard functionality
+- Responsive design
+- Beautiful neobrutalism UI
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Tech Stack
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- **Frontend Framework**: React 19
+- **Language**: TypeScript
+- **Build Tool**: Vite
+- **Styling**: CSS with Neobrutalism design
+- **Development Tools**:
+  - ESLint for code linting
+  - TypeScript for type checking
+  - Vite for development and building
+
+## Getting Started
+
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/tukar-huruf-besar-kecil.git
+cd tukar-huruf-besar-kecil
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+2. Install dependencies:
+```bash
+npm install
 ```
+
+3. Start the development server:
+```bash
+npm run dev
+```
+
+4. Build for production:
+```bash
+npm run build
+```
+
+## Contributing
+
+We welcome contributions! Here's how you can help:
+
+1. Fork the repository
+2. Create a new branch for your feature (`git checkout -b feature/amazing-feature`)
+3. Make your changes
+4. Commit your changes (`git commit -m 'Add some amazing feature'`)
+5. Push to the branch (`git push origin feature/amazing-feature`)
+6. Open a Pull Request
+
+### Development Guidelines
+
+- Follow the existing code style and formatting
+- Write meaningful commit messages
+- Add comments for complex logic
+- Ensure all tests pass (if any are added)
+- Update documentation as needed
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Author
+
+Muaz Hazali
+
+## Acknowledgments
+
+- Inspired by the [Neobrutalism](https://www.neobrutalism.dev/) design movement
+- Built with [React](https://reactjs.org/) and [Vite](https://vitejs.dev/)
